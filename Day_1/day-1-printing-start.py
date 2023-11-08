@@ -8,3 +8,9 @@ print("Hello " + input("What is your name?") + "!")
 
 # get the length of the name
 print(len(input("What is your name?")))
+
+# python variables
+name = input("What is your name?")
+print(name)
+
+
