@@ -16,14 +16,15 @@ years = int(input("How many years will you be investing for? \n"))
 
 # calculate the future value of the investment
 # future_value = initial_investment * (1 + interest_rate / 100) ** years
-future_value = initial_investment * (1 + interest_rate / 100) ** years
+future_value = initial_investment
 
 # generate the investment report
 print("Investment Report for " + name)
 # use a loop to calculate the value of the investment at the end of each year
 for i in range(1, years + 1):
-    print(f"Year {i}: £{future_value:.2f}")
+
     future_value = future_value * (1 + interest_rate / 100)
+    print(f"Year {i}: £{future_value:.2f}")
 
 # present the starting conditions and a yearly report of the investment
 print(f"Initial Investment: £{initial_investment:.2f}")
