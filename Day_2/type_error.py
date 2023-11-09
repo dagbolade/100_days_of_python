@@ -14,9 +14,13 @@
 # new_num_char = str(num_char)
 # print("Your name has " + new_num_char + " characters.")
 
-a = 123
-print(type(a))
-b = str(a)
-print(type(b))
-c = float(a)
-print(type(c))
+
+# exercise 2.1
+# Instructions
+# Write a program that adds the digits in a 2-digit number.
+two_digit_number = input("Type a two digit number: ")
+# print(type(two_digit_number))
+first_digit = int(two_digit_number[0])
+second_digit = int(two_digit_number[1])
+
+print(first_digit + second_digit)
