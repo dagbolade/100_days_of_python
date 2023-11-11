@@ -20,7 +20,7 @@ if left_or_right == "left":
         else:
             print("Game Over.")
     else:
-        print("Game Over.")
+        print("You swam into a crocodile. Game Over.")
 else:
-    print("Game Over.")
+    print("You fell into a hole. Game Over.")
 
