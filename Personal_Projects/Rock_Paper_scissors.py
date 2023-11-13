@@ -2,7 +2,7 @@
 # Displays greeting, rules, and asks for user input
 print("Welcome to Rock, Paper, Scissors!")
 print("Rules: Rock beats Scissors, Scissors beats Paper, Paper beats Rock")
-user_choice = input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors: ")
+user_choice = input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors: \n ")
 
 rock = '''
     _______
@@ -24,7 +24,6 @@ paper = '''
 
 scissors = '''
     _______
-    
 ---'   ____)____
             ______)
          __________)
