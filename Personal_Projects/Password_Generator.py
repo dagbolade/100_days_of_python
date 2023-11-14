@@ -46,4 +46,3 @@ random.shuffle(password)
 for char in password:
     user_password += char
 print(user_password)
-
