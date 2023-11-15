@@ -13,7 +13,7 @@ user_numbers = int(input("How many numbers would you like in your password? "))
 user_symbols = int(input("How many symbols would you like in your password? "))
 
 for char in range(1, user_letters + 1):
-    password.append(random.choice(letters))
+            password.append(random.choice(letters))
 for num in range(1, user_numbers + 1):
     password.append(random.choice(numbers))
 for sym in range(1, user_symbols + 1):
