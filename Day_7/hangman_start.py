@@ -2,6 +2,7 @@
 import random
 from hangman_words import word_list
 from hangman_art import stages, logo
+from clear_screen import clear_screen
 
 # TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
 
@@ -10,9 +11,9 @@ chosen_word = random.choice(word_list)
 # TODO-2: - Create a variable called 'lives' to keep track of the number of lives left.
 # Set 'lives' to equal 6.
 lives = 6
-print(f"lives: {lives}")
 
 print("Welcome to Hangman, a game of guessing the word")
+print(f"You have {lives} lives to guess the word")
 print(logo)
 # TODO-3: - Create an empty List called display.
 # For each letter in the chosen_word, add a "_" to 'display'.
@@ -29,6 +30,7 @@ print(display)
 while "_" in display:
     # TODO-5: - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
     guess = input("Guess a letter: ").lower()
+
 
     # TODO 5.1: - If the user has entered a letter they've already guessed, print the letter and let them know.
     if guess in display:
