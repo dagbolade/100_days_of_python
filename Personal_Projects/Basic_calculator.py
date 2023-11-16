@@ -6,9 +6,9 @@ name = input("Enter your name: ")
 print("Hello " + name + ", please enter the following details")
 
 # get the first number
-num1 = int(input("Enter the first number you wish to calculate: "))
+num1 = float(input("Enter the first number you wish to calculate: "))
 # get the second number
-num2 = int(input("Enter the second number you wish to calculate: "))
+num2 = float(input("Enter the second number you wish to calculate: "))
 
 # get the operator
 
@@ -24,7 +24,7 @@ elif operator == "-":
     result = num1 - num2
     # display the result
     print("Hi, " + name + " The result is " + str(result))
-elif operator == "*" or "X":
+elif operator == "*" or operator == "X":
     result = num1 * num2
     # display the result
     print("Hi, " + name + " The result is " + str(result))
