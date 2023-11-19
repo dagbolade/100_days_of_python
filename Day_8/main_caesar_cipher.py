@@ -7,14 +7,6 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
     , 't', 'u', 'v', 'w', 'x', 'y', 'z'
             ]
 
-# variable direction for user to choose
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-# variable text for user to enter the text
-text = input("Type your message:\n").lower()
-# variable shift for user to enter the shift number
-shift = int(input("Type the shift number:\n"))
-
-
 def caesar(plain_text, shift_amount, cipher_direction):
     cipher_text = ""
     # Todo-2: Inside the caesar() function, shift each letter of the 'text' forwards or backwards in the alphabet by
@@ -32,5 +24,18 @@ def caesar(plain_text, shift_amount, cipher_direction):
     print(f"The {cipher_direction}d text is {cipher_text}")
 
 
-# TODO-3: Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
+# Todo-3: import and print the logo from art.py when the program starts.
+from art import logo
+
+print(logo)
+
+# variable direction for user to choose
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# variable text for user to enter the text
+text = input("Type your message:\n").lower()
+# variable shift for user to enter the shift number
+shift = int(input("Type the shift number:\n"))
+
+
+# TODO-5: Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
 caesar(plain_text=text, shift_amount=shift, cipher_direction=direction)
