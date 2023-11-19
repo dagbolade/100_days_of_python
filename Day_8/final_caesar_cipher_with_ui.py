@@ -1,12 +1,9 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
             'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's'
-    , 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
-            'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's'
-    , 't', 'u', 'v', 'w', 'x', 'y', 'z'
-            ]
+    , 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 
-def caear(plain_text, shift_amount, cipher_direction):
+def caesar(plain_text, shift_amount, cipher_direction):
     cipher_text = ""
     if cipher_direction == "decode":
         shift_amount *= -1
@@ -17,10 +14,10 @@ def caear(plain_text, shift_amount, cipher_direction):
         if letter not in alphabet:
             cipher_text += letter
             continue
-        position = alphabet.index(letter)
-        new_position = position + shift_amount
+        position = alphabet.index(letter.lower())
+        new_position = (position + shift_amount) % len(alphabet)
         new_letter = alphabet[new_position]
-        cipher_text += new_letter
+        cipher_text += new_letter.lower() if letter.islower() else new_letter.upper()
     print(f"The {cipher_direction}d text is {cipher_text}")
 
 
@@ -45,7 +42,7 @@ while should_continue:
     shift = shift % 26
 
     # TODO-5: Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
-    caear(plain_text=text, shift_amount=shift, cipher_direction=direction)
+    caesar(plain_text=text, shift_amount=shift, cipher_direction=direction)
     result = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
     if result == "no":
         should_continue = False
