@@ -27,3 +27,17 @@ def format_name(f_name, l_name):
 
 
 print(format_name(input("What is your first name? "), input("What is your last name? ")))
+
+
+# Docstrings
+def format_name(f_name, l_name):
+    """Take a first and last name and format it
+    to return the title case version of the name."""
+    if f_name == "" or l_name == "":
+        return "You didn't provide valid inputs"
+    name1 = f_name.title()
+    name2 = l_name.title()
+    return f"{name1} {name2}"
+
+
+print(format_name(input("What is your first name? "), input("What is your last name? ")))
