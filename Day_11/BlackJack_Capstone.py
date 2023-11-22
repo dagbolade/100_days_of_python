@@ -4,8 +4,8 @@
 # Author: David Agbolade
 
 import random
-
-
+from art import logo
+print(logo)
 # create a list of cards
 def deal_card():
     """Returns a random card from the deck"""
@@ -35,7 +35,7 @@ def play_game():
         computer_cards.append(deal_card())
 
     print(user_cards)
-    print(computer_cards)
+    #print(computer_cards)
 
     # create a function to calculate the score that takes a list of cards as input
     def calculate_score(cards):
