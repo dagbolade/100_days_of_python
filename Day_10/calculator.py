@@ -1,7 +1,14 @@
 # calculator
 
 # Creating a basic calculator using python
+# display greetings
 from art import logo
+
+print("Welcome to the basic calculator")
+name = input("Enter your name: ").title()
+print("Hello " + name + ", please enter the following details")
+
+
 def add(n1, n2):
     return n1 + n2
 
@@ -50,5 +57,6 @@ def calculator():
         else:
             should_continue = False
             calculator()
+
 
 calculator()
