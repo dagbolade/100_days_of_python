@@ -26,18 +26,28 @@ operations = {
     "/": divide
 }
 
+
 # ask the user for input
-num1 = int(input("What is the first number?: "))
+def calculator():
+    # ask the user for input
+    num1 = float(input("What is the first number?: "))
+    for operator in operations:
+        print(operator)
+    # ask the user if they want to continue
+    should_continue = True
 
+    while should_continue:
+        operation_symbol = input("Pick an operation from the line above: ")
+        num2 = float(input("What is the next number?: "))
+        calculation_function = operations[operation_symbol]
+        answer = calculation_function(num1, num2)
+        print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-for operator in operations:
-    print(operator)
-operation_symbol = input("Pick an operation from the line above: ")
+        # ask the user if they want to continue
+        if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ") == "y":
+            num1 = answer
+        else:
+            should_continue = False
+            calculator()
 
-num2 = int(input("What is the second number?: "))
-# get the function from the dictionary
-calculation_function = operations[operation_symbol]
-# calculate the result
-answer = calculation_function(num1, num2)
-
-print(f"{num1} {operation_symbol} {num2} = {answer}")
+calculator()
