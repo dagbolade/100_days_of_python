@@ -1,5 +1,8 @@
 # The Number Guessing Game.
 import random
+
+from art import logo
+print(logo)
 print("Welcome to the Number Guessing Game!")
 # ask the user for their name and store it in a variable called name.
 name = input("What is your name? ").title()
@@ -22,11 +25,11 @@ attempts = 0
 
 # if the user chose 'easy', set the number of attempts to 10.
 if level == "easy":
-    attempts = 10
+    attempts = 5
     print(f"You have {attempts} attempts remaining to guess the number.")
 # if the user chose 'hard', set the number of attempts to 5.
 elif level == "hard":
-    attempts = 5
+    attempts = 3
     print(f"You have {attempts} attempts remaining to guess the number.")
 # if the user chose neither 'easy' nor 'hard', display an error message.
 else:
