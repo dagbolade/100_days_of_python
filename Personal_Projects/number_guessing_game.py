@@ -15,6 +15,7 @@ def choose_difficulty():
 
 def play_game(player_name, bet_amount, current_balance):
     """Play the Number Guessing Game."""
+    print(f"Hello {player_name}, I'm thinking of a number between 1 and 100.")
     while True:
         chosen_number = random.randint(1, 100)
         attempts = choose_difficulty()

@@ -2,6 +2,8 @@
 
 from blackjack import play_blackjack
 from number_guessing_game import play_game as play_number_guessing_game
+from art import logo
+
 
 def get_initial_balance():
     """Prompt the user for their initial balance."""
@@ -15,15 +17,18 @@ def get_initial_balance():
         except ValueError:
             print("Please enter a valid amount.")
 
+
 def get_player_name():
     """Prompt the user for their name."""
     return input("What is your name?: ").title()
+
 
 def select_game():
     """Prompt the user to select a game."""
     while True:
         try:
-            game_choice = int(input("Select a game:\n1. Blackjack\n2. Number Guessing Game\nEnter the corresponding number: "))
+            game_choice = int(
+                input("Select a game:\n1. Blackjack\n2. Number Guessing Game\nEnter the corresponding number: "))
             if game_choice not in [1, 2]:
                 print("Please enter a valid choice.")
             else:
@@ -31,8 +36,11 @@ def select_game():
         except ValueError:
             print("Please enter a valid choice.")
 
+
 def main():
     # Get the initial balance and player name from the user
+    print(logo)
+    print("Welcome to the Game World!, let's get started")
     player_name = get_player_name()
     initial_balance = get_initial_balance()
 
@@ -59,6 +67,7 @@ def main():
         if play_again != 'y':
             print(f"Thanks for playing, {player_name}! Your final balance: £ {current_balance}")
             break
+
 
 if __name__ == "__main__":
     main()
