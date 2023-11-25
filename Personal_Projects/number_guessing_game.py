@@ -1,14 +1,17 @@
 # number_guessing_game.py
 import random
 
+
 def welcome_user(player_name):
     """Welcome the user and ask for their name."""
     print(f"Hello {player_name}, I'm thinking of a number between 1 and 100.")
+
 
 def choose_difficulty():
     """Ask the user to choose a difficulty level."""
     level = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
     return 5 if level == "easy" else 3 if level == "hard" else 0
+
 
 def play_game(player_name, bet_amount, current_balance):
     """Play the Number Guessing Game."""
@@ -36,8 +39,12 @@ def play_game(player_name, bet_amount, current_balance):
             current_balance -= bet_amount
             print(f"Your new balance: £{current_balance}")
 
-            play_again = input("Do you want to play again? Type 'y' to play again or any other key to return to the main menu: ").lower()
-            if play_again != 'y':
+            play_again = input(
+                "Do you want to play again? Type 'y' to play again or any other key to return to the main menu: ").lower()
+            if play_again == 'y':
+                return play_game(player_name, bet_amount, current_balance)
+            else:
                 return current_balance
         else:
             print("Invalid difficulty level. Please choose 'easy' or 'hard'.")
+            return current_balance

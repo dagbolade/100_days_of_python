@@ -1,13 +1,16 @@
 # blackjack.py
 
 import random
-#from art import logo
+
+
+# from art import logo
 
 def deal_card():
     """Returns a random card from the deck"""
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     card = random.choice(cards)
     return card
+
 
 def calculate_score(cards):
     """Take a list of cards and return the score calculated from the cards"""
@@ -20,6 +23,7 @@ def calculate_score(cards):
         cards.append(1)
     # return the sum of the cards
     return sum(cards)
+
 
 def compare(user_score, computer_score, player_name, bet_amount):
     """Compare the user's score and the computer's score and return the winner"""
@@ -38,6 +42,7 @@ def compare(user_score, computer_score, player_name, bet_amount):
     else:
         return f"You lose £{bet_amount}, {player_name}."
 
+
 def get_bet():
     """Handle bets"""
     while True:
@@ -50,8 +55,9 @@ def get_bet():
         except ValueError:
             print("Please enter a valid amount.")
 
+
 def play_blackjack(player_name, bet_amount, current_balance):
-    #print(logo)
+    # print(logo)
 
     # deal the user and computer 2 cards each using deal_card() and append()
     user_cards = []
@@ -107,6 +113,22 @@ def play_blackjack(player_name, bet_amount, current_balance):
         current_balance += bet_amount
     elif "You Lose" in result:
         current_balance -= bet_amount
+    elif "Draw" in result:
+        current_balance += 0
+    elif "You went over" in result:
+        current_balance -= bet_amount
+    elif "Opponent went over" in result:
+        current_balance += bet_amount
+    elif "Win with a Blackjack" in result:
+        current_balance += int(bet_amount * 1.5)
 
     print(result)
-    return current_balance
+    print(f"Your current balance: £{current_balance}")
+
+    # Ask if the player wants to play again
+    play_again = input("Do you want to play again? Type 'y' or 'n': ").lower()
+    if play_again == 'y':
+        return play_blackjack(player_name, bet_amount, current_balance)
+    else:
+        print(f"Thanks for playing, {player_name}! Your final balance: £ {current_balance}")
+        return current_balance
