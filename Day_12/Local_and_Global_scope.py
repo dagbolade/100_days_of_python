@@ -63,3 +63,18 @@ def myfunc():
 myfunc()
 
 print(x)
+
+# Global constants
+"""
+Global constants are declared outside of all functions, and can be accessed from any function and are declared in ALL_CAPS.
+        
+"""
+
+# Example
+PI = 3.14
+
+def myfunc():
+    print(PI)
+
+myfunc()
+
