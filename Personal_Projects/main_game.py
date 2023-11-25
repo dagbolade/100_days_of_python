@@ -1,7 +1,7 @@
 # Main Script
 
 from blackjack import play_blackjack
-from number_guessing_game import play_number_guessing_game
+from number_guessing_game import play_game as play_number_guessing_game
 
 def get_initial_balance():
     """Prompt the user for their initial balance."""
@@ -33,8 +33,9 @@ def select_game():
 
 def main():
     # Get the initial balance and player name from the user
-    initial_balance = get_initial_balance()
     player_name = get_player_name()
+    initial_balance = get_initial_balance()
+
     current_balance = initial_balance
 
     while True:
