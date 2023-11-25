@@ -30,7 +30,7 @@ print("Let's get started, shall we?")
 def get_bet():
     while True:
         try:
-            bet = int(input("How much would you like to bet?: £"))
+            bet = int(input("How much would you like to bet?: £ "))
             if bet <= 0:
                 print("Please enter a valid amount")
             else:
@@ -117,6 +117,7 @@ def play_game():
                 user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
                 if user_should_deal == "y":
                     user_cards.append(deal_card())
+                    print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
                 else:
                     is_game_over = True
 
@@ -139,18 +140,24 @@ def play_game():
             user_money += bet
         elif "You Lose" in result:
             user_money -= bet
+        elif "Draw" in result:
+            user_money += 0
+        elif "Win with a Blackjack" in result:
+            user_money += bet * 1.5
+        elif "Opponent went over. You win" in result:
+            user_money += bet
+        elif "You went over. You lose" in result:
+            user_money -= bet
+        else:
+            user_money += 0
         print(result)
+
+        # Ask if the player wants to play again
+        play_again = input("Do you want to play again? Type 'y' or 'n': ").lower()
+        if play_again != 'y':
+            print(f"Thanks for playing, {name}! Your final balance: £ {user_money}")
+            break
 
 
 play_game()
-# ask the user if they want to play again
-# if yes, start the game again
-# if no, end the game
 
-while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-    import os
-
-    os.system('cls')
-    play_game()
-else:
-    print(f"Goodbye and thanks for playing {name}")
