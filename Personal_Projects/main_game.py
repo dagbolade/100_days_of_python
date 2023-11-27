@@ -9,7 +9,7 @@ def get_initial_balance():
     """Prompt the user for their initial balance."""
     while True:
         try:
-            balance = int(input("Enter your initial balance: £ "))
+            balance = int(input("Enter your initial balance: £"))
             if balance < 0:
                 print("Please enter a valid amount.")
             else:
@@ -40,7 +40,10 @@ def select_game():
 def main():
     # Get the initial balance and player name from the user
     print(logo)
-    print("Welcome to the Game World!, let's get started")
+    print("👋 Welcome to the Game Arcade!")
+    print("Get ready for a thrilling gaming adventure where you can play Blackjack ♠️♦️ and guess numbers 1️⃣2️⃣3️⃣.")
+    print("Challenge yourself, place bets, and see if luck is on your side.")
+
     player_name = get_player_name()
     initial_balance = get_initial_balance()
 
@@ -48,24 +51,24 @@ def main():
 
     while True:
         # Display current balance
-        print(f"{player_name}, your current balance: £ {current_balance}")
+        print(f"{player_name}, your current balance: £{current_balance}")
 
         # Select the game
         game_choice = select_game()
 
         if game_choice == 1:
             # Blackjack
-            bet_amount_blackjack = int(input("How much would you like to bet in Blackjack?: £ "))
+            bet_amount_blackjack = int(input("How much would you like to bet in Blackjack?: £"))
             current_balance = play_blackjack(player_name, bet_amount_blackjack, current_balance)
         elif game_choice == 2:
             # Number Guessing Game
-            bet_amount_guessing_game = int(input("How much would you like to bet in the Number Guessing Game?: £ "))
+            bet_amount_guessing_game = int(input("How much would you like to bet in the Number Guessing Game?: £"))
             current_balance = play_number_guessing_game(player_name, bet_amount_guessing_game, current_balance)
 
         # Ask if the player wants to continue playing
         play_again = input("Do you want to play another game? Type 'y' or 'n': ").lower()
         if play_again != 'y':
-            print(f"Thanks for playing, {player_name}! Your final balance: £ {current_balance}")
+            print(f"Thanks for playing, {player_name}! Your final balance: £{current_balance}")
             break
 
 
