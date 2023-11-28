@@ -20,8 +20,11 @@
 # # Play Computer
 # year = int(input("What's your year of birth? "))
 # if year > 1980 and year <= 1993:  # year >= 1981 and year <= 1993
-#     print("You are a millenial.")
+#     print("You are a millennial.")
 # elif year >= 1994:
 #     print("You are a Gen Z.")
 
 # Fix the Errors
+age = input("How old are you? ") # int(input("How old are you? "))
+if age > 18:
+    print(f"You can drive at age {age}.")
