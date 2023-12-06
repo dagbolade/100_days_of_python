@@ -35,9 +35,11 @@ def espresso():
         change = total - 1.50
         # print(f"Here is ${change} in change in 2 decimal places.")
         print("Here is ${:.2f} in change.".format(change))
+        deduct_resources(user)
         print("Here is your espresso ☕️. Enjoy!")
         add_money()
     else:
+        deduct_resources(user)
         print("Here is your espresso ☕️. Enjoy!")
         add_money()
     return espresso
@@ -52,9 +54,11 @@ def latte():
         change = total - 2.50
         # print(f"Here is ${change} in change in 2 decimal places.")
         print("Here is ${:.2f} in change.".format(change))
+        deduct_resources(user)
         print("Here is your latte ☕️. Enjoy!")
         add_money()
     else:
+        deduct_resources(user)
         print("Here is your latte ☕️. Enjoy!")
         add_money()
 
@@ -71,9 +75,11 @@ def cappuccino():
         change = total - 3.00
         # print(f"Here is ${change} in change in 2 decimal places.")
         print("Here is ${:.2f} in change.".format(change))
+        deduct_resources(user)
         print("Here is your cappuccino ☕️. Enjoy!")
         add_money()
     else:
+        deduct_resources(user)
         print("Here is your cappuccino ☕️. Enjoy!")
         add_money()
     return cappuccino
@@ -88,9 +94,11 @@ def tea():
         change = total - 1.50
         # print(f"Here is ${change} in change in 2 decimal places.")
         print("Here is ${:.2f} in change.".format(change))
+        deduct_resources(user)
         print("Here is your tea ☕️. Enjoy!")
         add_money()
     else:
+        deduct_resources(user)
         print("Here is your tea ☕️. Enjoy!")
         add_money()
     return tea
@@ -105,10 +113,12 @@ def hot_chocolate():
         change = total - 2.50
         # print(f"Here is ${change} in change in 2 decimal places.")
         print("Here is ${:.2f} in change.".format(change))
+        deduct_resources(user)
         print("Here is your hot chocolate ☕️. Enjoy!")
         add_money()
 
     else:
+        deduct_resources(user)
         print("Here is your hot chocolate ☕️. Enjoy!")
         add_money()
 
@@ -124,19 +134,30 @@ def milk():
         change = total - 1.00
         # print(f"Here is ${change} in change in 2 decimal places.")
         print("Here is ${:.2f} in change.".format(change))
+        deduct_resources(user)
         print("Here is your milk ☕️. Enjoy!")
         add_money()
     else:
+        deduct_resources(user)
         print("Here is your milk ☕️. Enjoy!")
         add_money()
 
     return milk
+
+
+# deduct the resources from the resources dictionary and return the resources dictionary
+def deduct_resources(drink):
+    for item in MENU[drink]["ingredients"]:
+        resources[item] -= MENU[drink]["ingredients"][item]
+    return resources
+
 
 # create a function to add the money to the money variable and return the money as a float
 def add_money():
     global money
     money += MENU[user]["cost"]
     return money
+
 
 # create a function for report
 def report():
