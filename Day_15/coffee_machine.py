@@ -21,7 +21,6 @@ def calculate_money():
     nickles = int(input("How many nickles?: "))
     pennies = int(input("How many pennies?: "))
     total = (quarters * 0.25) + (dimes * 0.10) + (nickles * 0.05) + (pennies * 0.01)
-
     return total
 
 
@@ -186,33 +185,27 @@ while True:
     #  check the user input to decide what to do next
     user = prompt_user()
     if user == "espresso":
-        check_resources(user)
-        espresso()
-
+        if check_resources(user):
+            espresso()
     elif user == "latte":
-        check_resources(user)
-        latte()
-
+        if check_resources(user):
+            latte()
     elif user == "cappuccino":
-        check_resources(user)
-        cappuccino()
-
+        if check_resources(user):
+            cappuccino()
     elif user == "tea":
-        check_resources(user)
-        tea()
-
+        if check_resources(user):
+            tea()
     elif user == "hot chocolate":
-        check_resources(user)
-        hot_chocolate()
-
+        if check_resources(user):
+            hot_chocolate()
     elif user == "milk":
-        check_resources(user)
-        milk()
-
-    # turn off the coffee machine by entering “off” to the prompt
-    elif user == "off":
-        print("Turning off the coffee machine...")
-        break
-    # todo: 4. print report
+        if check_resources(user):
+            milk()
     elif user == "report":
         report()
+    elif user == "off":
+        print("The coffee machine is turning off. Goodbye.")
+        break
+    else:
+        print("Please enter a valid input.")
