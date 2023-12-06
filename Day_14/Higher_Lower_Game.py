@@ -70,9 +70,11 @@ from art import logo, vs
 
 from game_data import data
 
+
 def get_account():
     """Get data from random account"""
     return random.choice(data)
+
 
 def format_data(account):
     """Format account data into printable format: name, description and country"""
@@ -81,12 +83,14 @@ def format_data(account):
     country = account["country"]
     return f"{name}, a {description}, from {country}"
 
+
 def check_answer(guess, a_followers, b_followers):
     """Take the user guess and follower counts and returns if they got it right"""
     if a_followers > b_followers:
         return guess == "a"
     else:
         return guess == "b"
+
 
 # Display the logo
 print(logo)
