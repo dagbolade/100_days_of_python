@@ -6,41 +6,56 @@
 
 # the code below is creating an object from the turtle class
 # constructing an object from a class
+#
+# from turtle import Turtle, Screen
+#
+# timmy = Turtle()
+# print(timmy)
+# timmy.shape("turtle")
+# timmy.color("green")
+# timmy.forward(100)
+# timmy.left(120)
+# timmy.forward(100)
+# timmy.left(120)
+# timmy.forward(100)
+# timmy.color("red")
+# timmy.forward(100)
+# timmy.left(120)
+# timmy.forward(100)
+# timmy.left(120)
+# timmy.forward(100)
+# timmy.color("blue")
+# timmy.right(120)
+# timmy.forward(100)
+# timmy.right(120)
+# timmy.forward(100)
+# timmy.left(120)
+# timmy.forward(100)
+# timmy.left(120)
+# timmy.forward(100)
+#
+# # creating an object from the screen class
+# my_screen = Screen()
+#
+# # attributes of the screen class
+# print(my_screen.canvheight)
+# print(my_screen.canvwidth)
+#
+# # methods of the screen class
+# my_screen.exitonclick() # this method will close the screen when clicked on
 
-from turtle import Turtle, Screen
+# using packages
+from prettytable import PrettyTable
+# creating an object from the prettytable class
+table = PrettyTable()
 
-timmy = Turtle()
-print(timmy)
-timmy.shape("turtle")
-timmy.color("green")
-timmy.forward(100)
-timmy.left(120)
-timmy.forward(100)
-timmy.left(120)
-timmy.forward(100)
-timmy.color("red")
-timmy.forward(100)
-timmy.left(120)
-timmy.forward(100)
-timmy.left(120)
-timmy.forward(100)
-timmy.color("blue")
-timmy.right(120)
-timmy.forward(100)
-timmy.right(120)
-timmy.forward(100)
-timmy.left(120)
-timmy.forward(100)
-timmy.left(120)
-timmy.forward(100)
+# adding columns to the table
+table.add_column("Pokemon", ["Pikachu", "Squirtle", "Charmander"])
+table.add_column("Type", ["Electric", "Water", "Fire"])
 
-# creating an object from the screen class
-my_screen = Screen()
-
-# attributes of the screen class
-print(my_screen.canvheight)
-print(my_screen.canvwidth)
-
-# methods of the screen class
-my_screen.exitonclick() # this method will close the screen when clicked on
+# printing the table
+print(table)
+# printing the table in a different format
+table.align = "l"
+print(table)
 
