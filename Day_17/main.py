@@ -26,7 +26,7 @@ user_2 = User("002", "titi")
 print(user_1.id,user_1.username)
 print(user_2.id,user_2.username)
 
-# calling the follow method
+# calling the follow method on user_1 and passing in user_2 as an argument
 user_1.follow(user_2)
 user_2.follow(user_1)
 
