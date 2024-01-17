@@ -4,9 +4,9 @@
 class QuizBrain:
 
     def __init__(self, q_list):
-        self.question_number = 0
-        self.question_list = q_list
-        self.score = 0
+        self.question_number = 0 # this is the current question number
+        self.question_list = q_list # this is the list of questions
+        self.score = 0 # this is the current score
 
     # create a method to check if there are more questions
     def still_has_questions(self):
