@@ -6,8 +6,8 @@ from data import question_data
 question_bank = []
 
 for question in question_data:
-    q_text = question["text"]
-    q_answer = question["answer"]
+    q_text = question["question"]
+    q_answer = question["correct_answer"]
     # creating a new question object
     new_question = Question(q_text, q_answer)
     # adding the new question object to the question_bank list
