@@ -46,7 +46,7 @@ question_data = [
     },
     {
         "type": "boolean", "difficulty": "easy", "category": "Science: Computers",
-        "question": "The NVidia GTX 1080 gets its name because it can only render at a "
+        "question": "The NVida GTX 1080 gets its name because it can only render at a "
                     "1920x1080 screen resolution.",
         "correct_answer": "False", "incorrect_answers": ["True"]
     },
