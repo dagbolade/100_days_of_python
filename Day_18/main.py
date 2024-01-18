@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, colormode
 
 # create a new turtle object
 tim = Turtle()
@@ -77,8 +77,8 @@ tim.color("orchid")
 #     tim.forward(100)
 #     tim.right(36)
 
-colors = ["dark slate blue", "dark turquoise", "dark violet", "dark olive green", "dark khaki", "dark goldenrod",
-          "dark salmon", "dark slate gray"]
+#colors = ["dark slate blue", "dark turquoise", "dark violet", "dark olive green", "dark khaki", "dark goldenrod",
+          #"dark salmon", "dark slate gray"]
 
 # # creae a function to draw a shape
 # def draw_shape(num_sides):  # num_sides is the number of sides of the shape
@@ -98,10 +98,17 @@ import random
 directions = [0, 90, 180, 270, 360]
 tim.pensize(10)
 tim.speed("fastest")
+colormode(255)
 
+def random_color():
+    r = random.randint(0, 255)  # generate a random number between 0 and 255
+    g = random.randint(0, 255)  # generate a random number between 0 and 255
+    b = random.randint(0, 255)  # generate a random number between 0 and 255
+    random_color = (r, g, b)  # create a tuple with the random numbers
+    return random_color
 
 def random_walk():
-    tim.color(random.choice(colors))  # choose a random color from the colors list
+    tim.color(random_color())  # choose a random color from the colors list
     tim.forward(30)
     tim.setheading(random.choice(directions))  # choose a random direction from the directions list
 
