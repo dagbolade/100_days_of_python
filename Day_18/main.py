@@ -138,40 +138,17 @@ draw_spirograph(5)
 # # write the name 'ACTIVE' on the screen with the turtle and different colors
 # def write_name():
 #     tim.penup()
-#     tim.goto(-100, 0)
+#     tim.goto(-200, 0)
 #     tim.pendown()
-#     tim.color("red")
-#     tim.write("A", font=("Arial", 80, "normal"))
-#     tim.penup()
-#     tim.goto(0, 0)
-#     tim.pendown()
-#     tim.color("orange")
-#     tim.write("C", font=("Arial", 80, "normal"))
-#     tim.penup()
-#     tim.goto(100, 0)
-#     tim.pendown()
-#     tim.color("yellow")
-#     tim.write("T", font=("Arial", 80, "normal"))
-#     tim.penup()
-#     tim.goto(200, 0)
-#     tim.pendown()
-#     tim.color("green")
-#     tim.write("I", font=("Arial", 80, "normal"))
-#     tim.penup()
-#     tim.goto(300, 0)
-#     tim.pendown()
-#     tim.color("blue")
-#     tim.write("V", font=("Arial", 80, "normal"))
-#     tim.penup()
-#     tim.goto(400, 0)
-#     tim.pendown()
-#     tim.color("indigo")
-#     tim.write("E", font=("Arial", 80, "normal"))
-#     tim.penup()
-#     tim.goto(500, 0)
-#     tim.pendown()
-# tim.color("violet")
+#     tim.color("dark slate blue")
+#     tim.write("ACTIVE", font=("Arial", 80, "normal"))
+
+
 # write_name()
+
+
+
+
 
 
 
