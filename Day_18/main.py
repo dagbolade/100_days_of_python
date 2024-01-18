@@ -77,8 +77,8 @@ tim.color("orchid")
 #     tim.forward(100)
 #     tim.right(36)
 
-#colors = ["dark slate blue", "dark turquoise", "dark violet", "dark olive green", "dark khaki", "dark goldenrod",
-          #"dark salmon", "dark slate gray"]
+# colors = ["dark slate blue", "dark turquoise", "dark violet", "dark olive green", "dark khaki", "dark goldenrod",
+# "dark salmon", "dark slate gray"]
 
 # # creae a function to draw a shape
 # def draw_shape(num_sides):  # num_sides is the number of sides of the shape
@@ -100,21 +100,81 @@ tim.pensize(10)
 tim.speed("fastest")
 colormode(255)
 
+
 def random_color():
     r = random.randint(0, 255)  # generate a random number between 0 and 255
     g = random.randint(0, 255)  # generate a random number between 0 and 255
     b = random.randint(0, 255)  # generate a random number between 0 and 255
-    random_color = (r, g, b)  # create a tuple with the random numbers
-    return random_color
-
-def random_walk():
-    tim.color(random_color())  # choose a random color from the colors list
-    tim.forward(30)
-    tim.setheading(random.choice(directions))  # choose a random direction from the directions list
+    color = (r, g, b)  # create a tuple with the random numbers
+    return color
 
 
-for _ in range(200):
-    random_walk()
+# def random_walk():
+#     tim.color(random_color())  # choose a random color from the colors list
+#     tim.forward(30)
+#     tim.setheading(random.choice(directions))  # choose a random direction from the directions list
+#
+#
+# for _ in range(200):
+#     random_walk()
+tim.speed("fastest")
+
+# draw a spirograph
+def draw_spirograph(size_of_gap):
+    for _ in range(int(360 / size_of_gap)):
+        tim.color(random_color())
+
+        tim.pensize(1)
+        tim.tilt(10)
+        tim.circle(100)
+        tim.setheading(tim.heading() + size_of_gap)
+
+
+
+draw_spirograph(5)
+
+
+
+# # write the name 'ACTIVE' on the screen with the turtle and different colors
+# def write_name():
+#     tim.penup()
+#     tim.goto(-100, 0)
+#     tim.pendown()
+#     tim.color("red")
+#     tim.write("A", font=("Arial", 80, "normal"))
+#     tim.penup()
+#     tim.goto(0, 0)
+#     tim.pendown()
+#     tim.color("orange")
+#     tim.write("C", font=("Arial", 80, "normal"))
+#     tim.penup()
+#     tim.goto(100, 0)
+#     tim.pendown()
+#     tim.color("yellow")
+#     tim.write("T", font=("Arial", 80, "normal"))
+#     tim.penup()
+#     tim.goto(200, 0)
+#     tim.pendown()
+#     tim.color("green")
+#     tim.write("I", font=("Arial", 80, "normal"))
+#     tim.penup()
+#     tim.goto(300, 0)
+#     tim.pendown()
+#     tim.color("blue")
+#     tim.write("V", font=("Arial", 80, "normal"))
+#     tim.penup()
+#     tim.goto(400, 0)
+#     tim.pendown()
+#     tim.color("indigo")
+#     tim.write("E", font=("Arial", 80, "normal"))
+#     tim.penup()
+#     tim.goto(500, 0)
+#     tim.pendown()
+# tim.color("violet")
+# write_name()
+
+
+
 
 # create a screen object for the turtle to draw on
 screen = Screen()
