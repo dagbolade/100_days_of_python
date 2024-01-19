@@ -28,19 +28,19 @@ tim = Turtle()
 
 # draw the spot paining
 # def draw_spot_painting():
-#     tim.penup()
-#     tim.goto(-200, -200)
-#     tim.pendown()
-#     tim.speed("fastest")
-#     for _ in range(10):
-#         for _ in range(10):
-#             tim.dot(20, random.choice(color_list))
-#             tim.penup()
-#             tim.forward(50)
-#             tim.pendown()
-#         tim.penup()
-#         tim.goto(-200, tim.ycor() + 50)
-#         tim.pendown()
+#     tim.penup() # lift the pen up
+#     tim.goto(-200, -200) # move the turtle to the starting position
+#     tim.pendown() # put the pen down
+#     tim.speed("fastest") # set the speed of the turtle to fastest
+#     for _ in range(10): # repeat the following code 10 times
+#         for _ in range(10): # repeat the following code 10 times
+#             tim.dot(20, random.choice(color_list)) # draw a dot with a random color from the color list
+#             tim.penup() # lift the pen up
+#             tim.forward(50) # move the turtle forward 50 pixels
+#             tim.pendown() # put the pen down
+#         tim.penup() # lift the pen up
+#         tim.goto(-200, tim.ycor() + 50) # move the turtle to the next row of dots
+#         tim.pendown() # put the pen down
 #
 #
 # draw_spot_painting()
@@ -51,23 +51,23 @@ tim.penup()
 tim.hideturtle()
 
 # set the starting position of the turtle
-tim.setheading(225)
-tim.forward(300)
-tim.setheading(0)
+tim.setheading(225) # set the heading of the turtle to 225
+tim.forward(300) # move the turtle forward 300 pixels
+tim.setheading(0) # set the heading of the turtle to 0
 
 # draw the spot painting
-number_of_dots = 100
+number_of_dots = 100 # set the number of dots to 100
 
-for dot_count in range(1, number_of_dots + 1):
-    tim.dot(20, random.choice(color_list))
-    tim.forward(50)
+for dot_count in range(1, number_of_dots + 1): # repeat the following code 100 times
+    tim.dot(20, random.choice(color_list)) # draw a dot with a random color from the color list
+    tim.forward(50) # move the turtle forward 50 pixels
 
-    if dot_count % 10 == 0:
-        tim.setheading(90)
-        tim.forward(50)
-        tim.setheading(180)
-        tim.forward(500)
-        tim.setheading(0)
+    if dot_count % 10 == 0: # if the dot count is divisible by 10
+        tim.setheading(90) # set the heading of the turtle to 90
+        tim.forward(50) # move the turtle forward 50 pixels
+        tim.setheading(180) # set the heading of the turtle to 180
+        tim.forward(500) # move the turtle forward 500 pixels
+        tim.setheading(0) # set the heading of the turtle to 0
 
 
 # create a screen object for the turtle to draw on
