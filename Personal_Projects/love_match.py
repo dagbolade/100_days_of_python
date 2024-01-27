@@ -9,7 +9,7 @@ class HerStandards:
         self.hobbies = hobbies
         self.biblical_standards = biblical_standards
 
-    # create another class attributes for biblical standards
+# setting biblical standards
 class BiblicalStandards:
         # set attributes
     def __init__(self, righteousness, wisdom, faithfulness, love, patience, strength, kindness, gentleness,
@@ -105,9 +105,9 @@ guy_profile = get_guy_profile()
 
 # check if the guy meets her standards
 # Finding match
-if is_match(guy_profile, her_standards):
-    print(f"{guy_profile.name}, you are a match!")
-else:
-    print(f"Sorry, {guy_profile.name}, you are not a match.")
+# if is_match(guy_profile, her_standards):
+#     print(f"{guy_profile.name}, you are a match!")
+# else:
+#     print(f"Sorry, {guy_profile.name}, you are not a match.")
 
 
