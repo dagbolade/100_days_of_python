@@ -81,6 +81,9 @@ while True:
 
     # Ask the user if they want to play again
     play_again = screen.textinput(title="Play Again?", prompt="Do you want to play again? (yes/no)").lower()
+    screen.clear()
+    screen.bgcolor("white")
+
     if play_again != "yes":
         break
 
