@@ -17,7 +17,7 @@ class Fish(Animal):
         super().__init__()  # call the __init__ method of the parent class and inherit the attributes and methods
 
     def breathe(self):
-        super().breathe() # call the breathe method of the parent class then add more functionality
+        super().breathe() # call the breath method of the parent class then add more functionality
         print("doing this underwater")
 
     def swim(self):
