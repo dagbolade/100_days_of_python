@@ -1,4 +1,4 @@
-# inheritance in simple terms is the ability to define a new class that is a modified version of an existing class.
+# Inheritance in simple terms is the ability to define a new class that is a modified version of an existing class.
 # Inheritance is a powerful feature in object-oriented programming.
 # It allows a class to inherit attributes and methods from another class.
 
