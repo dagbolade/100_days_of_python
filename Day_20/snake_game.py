@@ -23,6 +23,8 @@ screen.onkey(snake.up, "Up")  # move the snake up when the up arrow key is press
 screen.onkey(snake.down, "Down")  # move the snake down when the down arrow key is pressed
 screen.onkey(snake.left, "Left")  # move the snake left when the left arrow key is pressed
 screen.onkey(snake.right, "Right")  # move the snake right when the right arrow key is pressed
+
+
 # move the snake
 game_is_on = True
 while game_is_on:
@@ -51,5 +53,7 @@ while game_is_on:
         if snake.head.distance(segment) < 10:
             game_is_on = False
             scoreboard.game_over()
+
+
 
 screen.exitonclick()  # exit the screen when clicked
