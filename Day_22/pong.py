@@ -25,9 +25,8 @@ game_mode = screen.textinput("Game Mode", "Choose game mode: '1' for vs. Compute
 # Assigning the paddle class to a variable
 if game_mode == "1":  # if the user selects 1, the game mode is vs. Computer
     screen.listen()
-    #r_paddle = Paddle((350, 0))  # creating the right paddle in a tuple, because the position method in the paddle class
-    # l_paddle = Paddle((-350, 0))  # creating the left paddle
-    # Moving the right paddle
+    # r_paddle = Paddle((350, 0))  # creating the right paddle in a tuple, because the position method in the paddle
+    # class l_paddle = Paddle((-350, 0))  # creating the left paddle Moving the right paddle
     screen.onkey(r_paddle.go_up, "Up")
     screen.onkey(r_paddle.go_down, "Down")
 elif game_mode == "2":  # if the user selects 2, the game mode is vs. Another Player
@@ -73,8 +72,7 @@ while game_is_on:
 
     # when any of the score reaches 5, the game is over, the winner is displayed
     if scoreboard.l_score == 5 or scoreboard.r_score == 5:
-        print("Game Over, the winner is:" + " " + "Left Paddle" if scoreboard.l_score == 5 else "Right Paddle"
-        if scoreboard.r_score == 5 else "No winner")
+
         game_is_on = False
         scoreboard.game_over()
 
