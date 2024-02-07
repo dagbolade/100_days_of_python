@@ -24,7 +24,6 @@ screen.onkey(snake.down, "Down")  # move the snake down when the down arrow key 
 screen.onkey(snake.left, "Left")  # move the snake left when the left arrow key is pressed
 screen.onkey(snake.right, "Right")  # move the snake right when the right arrow key is pressed
 
-
 # move the snake
 game_is_on = True
 while game_is_on:
@@ -50,10 +49,8 @@ while game_is_on:
     # numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     # print(numbers[0:7:4])  # Output: [1, 3, 5]
     for segment in snake.segments[1:]:
-        if snake.head.distance(segment) < 10:
+        if snake.head.distance(segment) < 10:  # if the head collides with any segment in the tail
             game_is_on = False
             scoreboard.game_over()
-
-
 
 screen.exitonclick()  # exit the screen when clicked
